@@ -57,6 +57,8 @@ declare global {
         ready: () => void;
         expand: () => void;
         enableClosingConfirmation: () => void;
+        setHeaderColor: (color: string) => void;
+        setBackgroundColor: (color: string) => void;
       };
     };
   }
