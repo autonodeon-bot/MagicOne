@@ -6,25 +6,6 @@
     <title>MagicOne</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              mc: {
-                bg: '#3C3C3C',
-                btn: '#7C7C7C',
-                green: '#568203',
-                gold: '#FFD700'
-              }
-            },
-            fontFamily: {
-              mono: ['monospace']
-            }
-          }
-        }
-      }
-    </script>
     <style>
       body { overflow: hidden; background-color: #1a1a1a; color: white; user-select: none; }
       /* Custom Scrollbar */
@@ -35,19 +16,19 @@
   <script type="importmap">
 {
   "imports": {
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
     "vite": "https://esm.sh/vite@^7.2.7",
-    "crypto": "https://esm.sh/crypto@^1.0.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "react": "https://esm.sh/react@^19.2.2",
+    "@babylonjs/core": "https://esm.sh/@babylonjs/core@^8.41.0",
+    "react/": "https://esm.sh/react@^19.2.2/",
+    "qr-code-styling": "https://esm.sh/qr-code-styling@^1.9.2",
+    "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
     "react-dom/": "https://esm.sh/react-dom@^19.2.2/",
     "@vercel/node": "https://esm.sh/@vercel/node@^5.5.15",
-    "react/": "https://esm.sh/react@^19.2.2/",
-    "react": "https://esm.sh/react@^19.2.2",
-    "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
-    "qr-code-styling": "https://esm.sh/qr-code-styling@^1.9.2",
     "@vercel/kv": "https://esm.sh/@vercel/kv@^3.0.0",
-    "pako": "https://esm.sh/pako@^2.1.0",
-    "@babylonjs/core": "https://esm.sh/@babylonjs/core@^8.41.0",
-    "@vercel/blob": "https://esm.sh/@vercel/blob@^2.0.0"
+    "@vercel/blob": "https://esm.sh/@vercel/blob@^2.0.0",
+    "crypto": "https://esm.sh/crypto@^1.0.1",
+    "pako": "https://esm.sh/pako@^2.1.0"
   }
 }
 </script>
