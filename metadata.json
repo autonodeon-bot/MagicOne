@@ -1,0 +1,8 @@
+{
+  "name": "MagicOne",
+  "description": "A 3D Voxel Metaverse on Telegram. Build, trade, and conquer.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
