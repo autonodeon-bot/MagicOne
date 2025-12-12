@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content: blob:; style-src * 'self' 'unsafe-inline'; script-src * 'self' 'unsafe-inline' 'unsafe-eval'; object-src * 'self' blob:; img-src * 'self' data: blob:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content: blob:; style-src * 'self' 'unsafe-inline'; script-src * 'self' 'unsafe-inline' 'unsafe-eval' blob: data:; connect-src * 'self' 'unsafe-inline' blob: data:; worker-src * 'self' 'unsafe-inline' 'unsafe-eval' blob: data:; object-src * 'self' blob:; img-src * 'self' data: blob:;">
     <title>MagicOne</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
@@ -66,18 +66,18 @@
   <script type="importmap">
 {
   "imports": {
-    "vite": "https://esm.sh/vite@^7.2.7",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "react": "https://esm.sh/react@^19.2.2",
-    "@babylonjs/core": "https://esm.sh/@babylonjs/core@^8.41.0",
-    "react/": "https://esm.sh/react@^19.2.2/",
     "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.2/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
     "@vercel/node": "https://esm.sh/@vercel/node@^5.5.15",
-    "@vercel/kv": "https://esm.sh/@vercel/kv@^3.0.0",
-    "@vercel/blob": "https://esm.sh/@vercel/blob@^2.0.0",
+    "vite": "https://esm.sh/vite@^7.2.7",
     "crypto": "https://esm.sh/crypto@^1.0.1",
-    "pako": "https://esm.sh/pako@^2.1.0"
+    "@babylonjs/core": "https://esm.sh/@babylonjs/core@^8.41.1",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "pako": "https://esm.sh/pako@^2.1.0",
+    "@vercel/blob": "https://esm.sh/@vercel/blob@^2.0.0",
+    "@vercel/kv": "https://esm.sh/@vercel/kv@^3.0.0"
   }
 }
 </script>
