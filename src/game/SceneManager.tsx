@@ -167,9 +167,20 @@ const SceneManager: React.FC<SceneProps> = ({ mode, chunks, onPlaceBlock, onRemo
         }
     });
 
+    // Optimization: Throttle FPS update
+    let frameCount = 0;
+    let lastTime = performance.now();
+
     engine.runRenderLoop(() => {
         scene.render();
-        setFps(Math.round(engine.getFps()));
+        
+        frameCount++;
+        const now = performance.now();
+        if (now - lastTime > 1000) {
+            setFps(Math.round(engine.getFps()));
+            lastTime = now;
+            frameCount = 0;
+        }
     });
 
     const resize = () => engine.resize();
@@ -180,13 +191,18 @@ const SceneManager: React.FC<SceneProps> = ({ mode, chunks, onPlaceBlock, onRemo
         scene.dispose();
         engine.dispose();
     };
-  }, [mode, selectedBlock]); // Re-init if mode changes, keep simple for demo
+  }, [mode, selectedBlock]);
 
   return (
     <div className="relative w-full h-full">
-        <canvas ref={canvasRef} className="w-full h-full touch-none" onContextMenu={e => e.preventDefault()} />
+        <canvas 
+            ref={canvasRef} 
+            className="w-full h-full" 
+            style={{ width: '100%', height: '100%', touchAction: 'none', outline: 'none' }}
+            onContextMenu={e => e.preventDefault()} 
+        />
         <div className="absolute top-2 right-2 bg-black/50 text-white p-1 text-xs font-mono">
-            FPS: {fps} | X:0 Y:0 Z:0
+            FPS: {fps}
         </div>
     </div>
   );
